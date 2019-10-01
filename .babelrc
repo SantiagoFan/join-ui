@@ -1,0 +1,6 @@
+{
+    "plugins": [["import", {
+      "libraryName": "join-ui",
+      "libraryDirectory": "packages"
+    }]]
+  }
