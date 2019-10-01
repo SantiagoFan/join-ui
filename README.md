@@ -9,6 +9,20 @@ PC端  请使用ElementUI
 npm install join-ui
 ```
 
+##  使用
+```
+// 按需引入
+import {juiqrcode}  from 'join-ui'
+Vue.use(juiqrcode)
+// 完整引入
+import jui from 'join-ui'
+Vue.use(jui)
+```
+页面代码
+```
+<jui-qrcode text="http://www.nmgjoin.com"></jui-qrcode>
+```
+
 ```
 https://www.npmjs.com/package/join-ui
 https://npm.taobao.org/package/join-ui

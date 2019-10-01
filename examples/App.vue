@@ -2,20 +2,25 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <JuiQrcode></JuiQrcode>
+    <JuiQrcode text="http://www.nmgjoin.com"></JuiQrcode>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
-import JuiQrcode from './../packages/qrcode/'
-
+import jui from '../packages/index'
+import { JuiQrcode } from '../packages/index'
 export default {
   name: 'app',
   components: {
     HelloWorld,
-    JuiQrcode
+  },
+  mounted(){
+     console.info(jui)
+    console.info(JuiQrcode)
+
   }
+
 }
 </script>
 
