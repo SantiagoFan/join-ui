@@ -1,9 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import jui from '../packages/index'
+// import jui from '../packages/index'
+// import { juiQrcode } from '../packages/index'
 
-Vue.use(jui)
+// console.info(jui)
+// console.info(juiQrcode)
+
 
 Vue.config.productionTip = false
 new Vue({
