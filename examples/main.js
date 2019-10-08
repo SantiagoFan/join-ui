@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-// import jui from '../packages/index'
-// import { juiQrcode } from '../packages/index'
+// 全局引入
+import jui from '~'
+Vue.use(jui)
 
-// console.info(jui)
-// console.info(juiQrcode)
 
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
 
 Vue.config.productionTip = false
 new Vue({
