@@ -9,8 +9,9 @@
     "build": "vue-cli-service build",
     "build:docs": "vue-cli-service build",
     "build:entry": "node build/build-entry.js ",
+    "new:comp": "node build/create-comp.js && node build/build-entry.js",
+    "del:comp": "node build/delete-comp.js && node build/build-entry.js",
     "lint": "vue-cli-service lint",
-    "build-theme": "gulp build --gulpfile packages/theme-default/gulpfile.js && cp-cli packages/theme-default/lib lib/theme-default",
     "lib": "vue-cli-service build --target lib --name join-ui --dest lib packages/index.js"
   },
   "dependencies": {
