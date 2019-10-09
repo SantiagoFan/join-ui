@@ -29,6 +29,7 @@
     "clipboard": "^2.0.4",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "gh-pages": "^2.1.1",
     "highlight.js": "^9.15.10",
     "markdown-it-container": "^2.0.0",
     "markdown-it-decorate": "^1.2.2",
