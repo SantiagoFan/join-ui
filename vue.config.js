@@ -1,4 +1,53 @@
 const path = require('path')
+
+const MarkdownItContainer = require('markdown-it-container')
+const MarkdownItCheckBox = require('markdown-it-task-checkbox')
+const MarkdownItDec = require('markdown-it-decorate')
+const utils = require('./build/utils')
+
+const vueMarkdown = {
+    raw: true,
+    preprocess: (MarkdownIt, source) => {
+      MarkdownIt.renderer.rules.table_open = function () {
+        return '<table class="table">'
+      }
+      // ```html``` 给这种样式加个class hljs
+      MarkdownIt.renderer.rules.fence = utils.wrapCustomClass(
+        MarkdownIt.renderer.rules.fence
+      )
+      // ```code``` 给这种样式加个class code_inline
+      const codeInline = MarkdownIt.renderer.rules.code_inline
+      MarkdownIt.renderer.rules.code_inline = function (...args) {
+        args[0][args[1]].attrJoin('class', 'code_inline')
+        return codeInline(...args)
+      }
+      return source
+    },
+    use: [
+      [
+        MarkdownItContainer,
+        'demo',
+        {
+          validate: params => params.trim().match(/^demo\s*(.*)$/),
+          render: function (tokens, idx) {
+            if (tokens[idx].nesting === 1) {
+              return `<demo-block>
+                          <div slot="highlight">`
+            }
+            return '</div></demo-block>\n'
+          }
+        }
+      ],
+      [
+        MarkdownItCheckBox,
+        {
+          disabled: true
+        }
+      ],
+      [MarkdownItDec]
+    ]
+  }
+  
 // vue.config.js
 module.exports = {
     pages: {
@@ -14,26 +63,15 @@ module.exports = {
         config.resolve.alias
             .set('@', path.resolve('examples'))
             .set('~', path.resolve('packages'));
-        // lib目录是组件库最终打包好存放的地方，不需要eslint检查
-        // examples/docs是存放md文档的地方，也不需要eslint检查
+
         config.module
-            .rule('eslint')
-            .exclude.add(path.resolve('lib'))
+            .rule('md')
+            .test(/\.md/)
+            .use('vue-loader')
+            .loader('vue-loader')
             .end()
-            .exclude.add(path.resolve('examples/docs'))
-            .end();
-        // packages和examples目录需要加入编译
-        config.module
-            .rule('js')
-            .include.add(/packages/)
-            .end()
-            .include.add(/examples/)
-            .end()
-            .use('babel')
-            .loader('babel-loader')
-            .tap(options => {
-                // 修改它的选项...
-                return options;
-            });
+            .use('vue-markdown-loader')
+            .loader('vue-markdown-loader/lib/markdown-compiler')
+            .options(vueMarkdown)
     }
   }
