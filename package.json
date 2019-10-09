@@ -9,6 +9,7 @@
     "build": "vue-cli-service build",
     "build:docs": "vue-cli-service build",
     "build:entry": "node build/build-entry.js ",
+    "publish:docs": "node build/publish-docs.js",
     "new:comp": "node build/create-comp.js && node build/build-entry.js",
     "del:comp": "node build/delete-comp.js && node build/build-entry.js",
     "lint": "vue-cli-service lint",

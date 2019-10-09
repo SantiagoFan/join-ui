@@ -4,7 +4,7 @@ module.exports = {
         compoenntName = compoenntName.charAt(0).toLowerCase() + compoenntName.slice(1)
         return `<template>
 
-  <div class="vtp-${compoenntName}">
+  <div class="jui-${compoenntName}">
 
     ${compoenntName}
 
@@ -13,7 +13,7 @@ module.exports = {
 
 <script>
 export default {
-  name: 'vtp-${compoenntName}', 
+  name: 'jui-${compoenntName}', 
 
   data () {
 
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-.vtp-${compoenntName}{}
+.jui-${compoenntName}{}
 </style>
 `
     },
@@ -76,7 +76,7 @@ if (typeof window !== 'undefined' && window.Vue) {
     entryTemplate: compoenntName => {
         return `import ${compoenntName} from './${compoenntName}'
 
-$ {compoenntName}.install = function(Vue) {
+  ${compoenntName}.install = function(Vue) {
     Vue.component(${compoenntName}.name, ${compoenntName})
 }
 
