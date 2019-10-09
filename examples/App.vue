@@ -2,6 +2,7 @@
   <div id="app">
     <mainHeader></mainHeader>
     <div class="container">
+      <btn></btn>
       <sideNav class="nav"></sideNav>
       <router-view class="view"></router-view>
     </div>
@@ -14,47 +15,26 @@ import mainHeader from './components/header.vue'
 import mainFooter from './components/footer.vue'
 import sideNav from './components/side-nav.vue'
 
-import hljs from 'highlight.js'
 import Clipboard from 'clipboard'
 
-const highlightCode = () => {
-    const preEl = document.querySelectorAll('pre')
-    preEl.forEach((el) => {
-        hljs.highlightBlock(el)
-        const lang = el.children[0].className.split(' ')[1].split('-')[1]
-        const pre = el
-        const span = document.createElement('span')
-        span.setAttribute('class', 'code-copy')
-        span.setAttribute('data-clipboard-snippet', '')
-        span.innerHTML = `${lang.toUpperCase()} | COPY` 
-        pre.appendChild(span)
-    })
-  }
-
-export default {
-  name: 'app',
-  components: {
-    mainHeader,
-    sideNav,
-    mainFooter
-  },
-   mounted() {
-    highlightCode()
-    let clipboard = new Clipboard('.code-copy', {
-        text: (trigger) => {
-            return trigger.previousSibling.innerText
-        }
-    })
-    // 复制成功执行的回调
-    clipboard.on('success', (e) => {
-        e.trigger.innerHTML = `已复制` 
-    })
-},
-
-updated() {
-    highlightCode()
-}
-  
+  export default {
+    name: 'app',
+    components: {
+      mainHeader,
+      sideNav,
+      mainFooter
+    },
+    mounted() {
+      let clipboard = new Clipboard('.code-copy', {
+          text: (trigger) => {
+              return trigger.previousSibling.innerText
+          }
+      })
+      // 复制成功执行的回调
+      clipboard.on('success', (e) => {
+          e.trigger.innerHTML = `已复制` 
+      })
+    }
 }
 </script>
 

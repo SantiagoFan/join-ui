@@ -26,7 +26,6 @@
       },
       {
         "name": "index",
-        "isMobile": "1",
         "path": "/index",
         "type": "pages"
       }
@@ -34,23 +33,19 @@
     "组件": [
       {
         "desc": "基础组件",
-        "isMobile": "1",
         "items": [
           {
-            "desc": "Icon 图标",
-            "name": "icon",
-            "isMobile": "1",
-            "path": "/icon"
+            "desc": "按钮",
+            "name": "Btn",
+            "path": "/Btn"
           }
         ]
       },
       {
         "desc": "卡片组件",
-        "isMobile": "1",
         "items": [
           {
             "desc": "Base 基础卡片",
-            "isMobile": "1",
             "name": "base-card",
             "path": "/base-card"
           }

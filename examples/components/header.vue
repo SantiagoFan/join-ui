@@ -5,7 +5,7 @@
   >
     <div class="header-container">
       <a href="https://github.com/SantiagoFan/join-ui" target="__blank">
-        <span class="name">JUI</span>
+        <span class="name">JUI 灵集科技Vue 组件库</span>
       </a>
     </div>
   </header>
