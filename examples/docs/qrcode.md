@@ -1,14 +1,14 @@
-# Btn 组件
+# qrcode 组件
 
 <!-- {.md} -->
 
 ---
 <!-- {.md} -->
-
 ## 如何使用
 ::: demo
 ```html
-<vue-btn></vue-btn>
+<qrcode></qrcode>
+
 ```
 :::
 

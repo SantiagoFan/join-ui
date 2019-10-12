@@ -1,12 +1,12 @@
 <template>
   <div class="jui-btn">
-    btn
+    btn 组件
   </div>
 </template>
 
 <script>
 export default {
-  name: 'jui-btn',
+  name: 'btn',
   data () {
     return {
     }

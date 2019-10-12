@@ -2,10 +2,10 @@
   <div id="app">
     <mainHeader></mainHeader>
     <div class="container">
-      <btn></btn>
       <sideNav class="nav"></sideNav>
       <router-view class="view"></router-view>
     </div>
+    <qrcode></qrcode>
     <mainFooter></mainFooter>
   </div>
 </template>
@@ -15,6 +15,7 @@ import mainHeader from './components/header.vue'
 import mainFooter from './components/footer.vue'
 import sideNav from './components/side-nav.vue'
 
+
 import Clipboard from 'clipboard'
 
   export default {
@@ -23,6 +24,9 @@ import Clipboard from 'clipboard'
       mainHeader,
       sideNav,
       mainFooter
+    },
+    created(){
+      console.info(this.$options.components)
     },
     mounted() {
       let clipboard = new Clipboard('.code-copy', {

@@ -42,12 +42,12 @@
         ]
       },
       {
-        "desc": "卡片组件",
+        "desc": "拓展组件",
         "items": [
           {
-            "desc": "Base 基础卡片",
-            "name": "base-card",
-            "path": "/base-card"
+            "desc": "二维码",
+            "name": "qrcode",
+            "path": "/qrcode"
           }
         ]
       }
