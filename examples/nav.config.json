@@ -15,11 +15,6 @@
         "desc": "快速上手"
       },
       {
-        "name": "logs",
-        "path": "/logs",
-        "desc": "更新日志"
-      },
-      {
         "name": "contribute",
         "path": "/contribute",
         "desc": "开发指南"
