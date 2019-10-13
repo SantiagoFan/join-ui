@@ -5,11 +5,15 @@
 ---
 <!-- {.md} -->
 ## 如何使用
-<qrcode-demo></qrcode-demo>
-<qrcode></qrcode>
+<div class="demo-block">
+    <qrcode :text="'http://wwww.baidu.com'"></qrcode>
+</div>
+
 ::: demo
 ```html
+
 <qrcode></qrcode>
+
 ```
 :::
 

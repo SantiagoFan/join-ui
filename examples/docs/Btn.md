@@ -6,10 +6,15 @@
 <!-- {.md} -->
 
 ## 如何使用
-<btn-demo></btn-demo>
+<div class="demo-block">
+    <btn></btn>
+</div>
+
 ::: demo
 ```html
+
 <btn></btn>
+
 ```
 :::
 
