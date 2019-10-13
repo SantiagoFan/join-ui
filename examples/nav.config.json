@@ -1,0 +1,55 @@
+{
+    "开发指南": [
+      {
+        "name": "site-index",
+        "path": "/"
+      },
+      {
+        "name": "introduce",
+        "path": "/introduce",
+        "desc": "介绍"
+      },
+      {
+        "name": "start",
+        "path": "/start",
+        "desc": "快速上手"
+      },
+      {
+        "name": "logs",
+        "path": "/logs",
+        "desc": "更新日志"
+      },
+      {
+        "name": "contribute",
+        "path": "/contribute",
+        "desc": "开发指南"
+      },
+      {
+        "name": "index",
+        "path": "/index",
+        "type": "pages"
+      }
+    ],
+    "组件": [
+      {
+        "desc": "基础组件",
+        "items": [
+          {
+            "desc": "按钮",
+            "name": "Btn",
+            "path": "/Btn"
+          }
+        ]
+      },
+      {
+        "desc": "拓展组件",
+        "items": [
+          {
+            "desc": "二维码",
+            "name": "qrcode",
+            "path": "/qrcode"
+          }
+        ]
+      }
+    ]
+  }

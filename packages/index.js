@@ -1,31 +1,35 @@
-// 导入日期选择器组件
-import juiQrcode from './qrcode/index.js'
-import skuTable from './sku/index.js'
-
+/* eslint-disable */
+// This file is auto gererated by build/build-entry.js
+import Btn from './Btn'
+import Qrcode from './qrcode'
+const version = '0.1.8'
 // 存储组件列表
 const components = [
-  juiQrcode,
-  skuTable
-  ];
-
-// 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
-const install = function (Vue) {
-  // 判断是否安装
-  if (install.installed) return
+  Btn,
+  Qrcode
+]
+const install = Vue => {
+  console.info('注册全部组件开始')
   // 遍历注册全局组件
-  components.map(component => Vue.component(component.name, component))
-}
+  components.forEach(Component => {
+    console.info('注册'+Component.name)
+    console.info(Component)
+    Vue.use(Component)
+  })
+  console.info('注册全部组件开始-')
+};
 
-// 判断是否是直接script引入文件
+/* istanbul ignore if */
 if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
-
-
-export default {
-  // 导出的对象必须具有 install，才能被 Vue.use() 方法安装
+export {
   install,
-  // 以下是具体的组件列表
-  juiQrcode,
-  skuTable
+  version,
+  Btn,
+  Qrcode
+}
+export default {
+  install,
+  version
 }

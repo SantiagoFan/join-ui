@@ -1,10 +1,13 @@
 <template>
-  <div id="qrcode" ref="qrCodeDiv" class="qrcode-container"></div>
+  <div>
+    qrcode 组件内部
+    <div id="qrcode" ref="qrCodeDiv" class="qrcode-container"></div>
+  </div>
 </template>
 <script>
 import QRCode from 'qrcodejs2'
 export default {
-  name: 'juiQrcode',
+  name: 'qrcode',
   props: {
     text: {
       type: String,
