@@ -24,9 +24,6 @@ import Clipboard from 'clipboard'
       sideNav,
       mainFooter
     },
-    created(){
-      console.info(this.$options.components)
-    },
     mounted() {
       let clipboard = new Clipboard('.code-copy', {
           text: (trigger) => {

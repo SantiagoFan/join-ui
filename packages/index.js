@@ -9,14 +9,12 @@ const components = [
   Qrcode
 ]
 const install = Vue => {
-  console.info('注册全部组件开始')
   // 遍历注册全局组件
   components.forEach(Component => {
     console.info('注册'+Component.name)
-    console.info(Component)
+
     Vue.use(Component)
   })
-  console.info('注册全部组件开始-')
 };
 
 /* istanbul ignore if */
