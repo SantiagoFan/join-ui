@@ -6,6 +6,7 @@
           <div class="highlight-wrapper">
             <slot name="highlight"></slot>
           </div>
+          <div class="code-copy">复制代码</div>
         </div>
       </div>
     </div>
@@ -42,6 +43,7 @@ export default {
   background-color: #f7f7f7;
   border: 1px solid #e2ecf4;
   border-top: none;
+  position: relative;
   pre code {
     font-family: Consolas, Menlo, Courier, monospace;
     line-height: 22px;
@@ -117,5 +119,16 @@ export default {
     border: 0;
     height: 548px;
   }
+}
+.code-copy{
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  padding: 2px;
+  font-size: 12px;
+  border-bottom: 1px solid #e2ecf4;
+  border-left: 1px solid #e2ecf4;
+  background-color: #eee;
 }
 </style>

@@ -1,29 +1,44 @@
-# qrcode 组件
+# qrcode 二维码组件
+----
 
-<!-- {.md} -->
+### 基础用法
+`text` 内容为二维码具体数据
 
----
-<!-- {.md} -->
-## 如何使用
 <div class="demo-block">
-    <qrcode :text="'http://wwww.baidu.com'"></qrcode>
+   <qrcode text='https://github.com/SantiagoFan/join-ui'>
+ </qrcode>
 </div>
 
-::: demo
+:::demo
 ```html
-
-<qrcode></qrcode>
-
+ <qrcode text='https://github.com/SantiagoFan/join-ui'></qrcode>
 ```
 :::
 
-<!-- {.md} -->
+### 拓展用法
+通过控制 `colorDark` 修改二维码前景颜色 `width` `height` 修改二维码显示大小
 
-## Attributes
+<div class="demo-block">
+   <qrcode text='https://github.com/SantiagoFan/join-ui' colorDark="#003c81" :width="200"  :height="200">
+ </qrcode>
+</div>
 
-<!-- {.md} -->
+:::demo
+```html
+<qrcode text='https://github.com/SantiagoFan/join-ui' 
+  colorDark="#003c81" width="200"  height="200"
+  >
+</qrcode>
+```
+:::
 
-| 参数  | 说明  | 类型  | 可选值 | 默认值 |
-|-----|-----|-----|-----|-----|
-| -   | -   | -   | -   | -   |
 
+## API
+
+|     参数     |     说明     |     类型     |     默认值     |
+|-------------|------------- |------------ |-------------- |
+|   text    | 二维码转码内容  |    String    | - |  
+|width      |     宽度      |    Number       |
+|height     |     高度      |    Number       | 
+|colorDark  |     前景颜色      |    String       |  #000
+|colorLight |     背景颜色      |    String       |  #fff

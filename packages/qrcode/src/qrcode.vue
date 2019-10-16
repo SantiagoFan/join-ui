@@ -1,6 +1,5 @@
 <template>
   <div>
-    qrcode 组件内部
     <div id="qrcode" ref="qrCodeDiv" class="qrcode-container"></div>
   </div>
 </template>

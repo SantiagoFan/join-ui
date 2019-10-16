@@ -25,21 +25,18 @@ const vueMarkdown = {
     },
     use: [
       [
-        MarkdownItContainer,
-        // 'demo',
-        // {
-        //   validate: params => {
-        //     console.info(params)
-        //     params.trim().match(/^demo\s*(.*)$/)
-        //   },
-        //   render: function (tokens, idx) {
-        //     if (tokens[idx].nesting === 1) {
-        //       return `<demo-block>
-        //                   <div slot="highlight">`
-        //     }
-        //     return '</div></demo-block>\n'
-        //   }
-        // }
+        MarkdownItContainer,'demo',{ // 匹配页面内:::demo 标签
+          validate: params => {
+            return params.trim().match(/^demo\s*(.*)$/)
+          },
+          render: function (tokens, idx) {
+            if (tokens[idx].nesting === 1) {
+              return `<demo-block>
+                  <div slot="highlight">`
+            }
+            return '</div></demo-block>\n'
+          }
+        }
       ],
       [
         MarkdownItCheckBox,

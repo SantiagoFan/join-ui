@@ -22,8 +22,6 @@ Vue.component('demo-block', demoBlock)
 
 Vue.use(JUI)
 
-console.info(JUI)
-
 Vue.config.productionTip = false
 new Vue({
   render: h => h(App),
