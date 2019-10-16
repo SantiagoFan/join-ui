@@ -14,6 +14,7 @@ const GIT_COMMIT = execSync('git rev-parse --short HEAD').toString().replace(/\n
 const ghpages = require('gh-pages')
 execSync('npm run build:docs')
 ghpages.publish('dist', {
+  branch: 'gh-pages',
   user: {
     name: 'SantiagoFan',
     email: '464884785@qq.com'

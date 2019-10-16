@@ -43,3 +43,5 @@ https://npm.taobao.org/package/join-ui
 
 
 # 发布页面
+
+git subtree push --prefix dist origin gh-pages
