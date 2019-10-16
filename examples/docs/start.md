@@ -27,6 +27,12 @@ Vue.use(VueCards)
 
 
 ## 单个组件按需使用
+babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式
+# 安装插件
+npm i babel-plugin-import -D
+
+
+
 
 
 可以局部注册所需的组件，适用于与其他框架组合使用的场景

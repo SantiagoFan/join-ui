@@ -13,12 +13,8 @@ const GIT_COMMIT = execSync('git rev-parse --short HEAD').toString().replace(/\n
 
 const ghpages = require('gh-pages')
 execSync('npm run build:docs')
-ghpages.publish('dist', {
-  branch: 'gh-pages',
-  user: {
-    name: 'SantiagoFan',
-    email: '464884785@qq.com'
-  },
-  repo: 'https://github.com/SantiagoFan/join-ui.git',
-  message: `[deploy] ${GIT_COMMIT} - [release] ${VERSION}`
+console.info('文件准备完成')
+ghpages.publish('dist', function(err){
+  console.info(err)
+  console.info('文档发布完成')
 });
