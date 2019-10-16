@@ -50,6 +50,7 @@ const vueMarkdown = {
   
 // vue.config.js
 module.exports = {
+    publicPath:'', // 增加此项  修改默认/ 防止git page 404
     pages: {
         // 将entry 修改 src 目录 为 examples 目录
         index: {
