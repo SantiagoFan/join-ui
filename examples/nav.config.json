@@ -43,6 +43,11 @@
             "desc": "二维码",
             "name": "qrcode",
             "path": "/qrcode"
+          },
+          {
+            "desc": "SKU 商品规格",
+            "name": "sku",
+            "path": "/sku"
           }
         ]
       }

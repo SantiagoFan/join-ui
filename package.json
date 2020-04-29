@@ -14,10 +14,10 @@
     "del:comp": "node build/delete-comp.js && node build/build-entry.js",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name join-ui --dest lib packages/index.js"
-
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "element-ui": "^2.13.1",
     "qrcodejs2": "0.0.2",
     "vue": "^2.6.10"
   },
