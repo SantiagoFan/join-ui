@@ -48,6 +48,11 @@
             "desc": "SKU 商品规格",
             "name": "sku",
             "path": "/sku"
+          },
+          {
+            "desc": "FileGroup",
+            "name": "FileGroup",
+            "path": "/FileGroup"
           }
         ]
       }

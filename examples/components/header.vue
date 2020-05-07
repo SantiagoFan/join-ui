@@ -7,13 +7,17 @@
       <a href="https://github.com/SantiagoFan/join-ui" target="__blank">
         <span class="name">MDS Vue 组件库</span>
       </a>
+      <span>{{ version }}</span>
     </div>
   </header>
 </template>
 <script>
+const pkg = require('../../package.json')
 export default {
   data () {
-    return {}
+    return {
+      version:pkg.version
+    }
   }
 }
 </script>

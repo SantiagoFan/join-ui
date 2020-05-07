@@ -20,15 +20,11 @@
         </thead>
         <tbody v-if="value.length>0">
           <tr v-for="(item,index) in value" :key="item.ProductSpec">
-            <td
-              v-for="(sp, sp_index) in specification"
-              v-if="showTd(sp_index, index)"
-              :key="sp_index"
-              :rowspan="countSum(sp_index+1)"
-            >
-              {{ getSpecValue(sp_index, index) }}
-            </td>
-            <!-- <td>{{ item.ProductSpec }}</td> -->
+            <template v-for="(sp, sp_index) in specification">
+              <td  v-if="showTd(sp_index, index)" :rowspan="countSum(sp_index+1)" :key="sp_index">
+                {{ getSpecValue(sp_index, index) }}
+              </td>
+            </template>
             <td>
               <el-input-number
                 v-model.number="item.ProductPrice"
