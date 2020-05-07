@@ -41,9 +41,17 @@ https://npm.taobao.org/package/join-ui
 4. vuelist      移动端分页加载数据 混合对象
 
 
-
-# 发布页面
+# 发布文档页面
 
 git subtree push --prefix dist origin gh-pages
 
 npm run publish:docs
+
+# 发布 npm
+npm run lib 打包
+npm login
+npm publish
+
+## 如果更换换淘宝仓库 需要发布npm 请使用下面命令
+npm login --registry http://registry.npmjs.org
+npm publish --registry http://registry.npmjs.org
