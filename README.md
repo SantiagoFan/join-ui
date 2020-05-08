@@ -40,6 +40,8 @@ https://npm.taobao.org/package/join-ui
 3. SkuTable     SKU 规格参数组件
 4. vuelist      移动端分页加载数据 混合对象
 
+# 使用模板创建组件
+npm run new:comp
 
 # 发布文档页面
 
@@ -49,6 +51,7 @@ npm run publish:docs
 
 # 发布 npm
 npm run lib 打包
+
 npm login
 npm publish
 
