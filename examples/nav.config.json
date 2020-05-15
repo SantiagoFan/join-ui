@@ -50,9 +50,9 @@
             "path": "/sku"
           },
           {
-            "desc": "FileGroup",
-            "name": "FileGroup",
-            "path": "/FileGroup"
+            "desc": "背景色选择器",
+            "name": "BgSelector",
+            "path": "/BgSelector"
           }
         ]
       }

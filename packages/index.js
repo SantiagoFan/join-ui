@@ -1,6 +1,7 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
 import FileGroup from './FileGroup'
+import BgSelector from './BgSelector'
 import SkuSpec from './SkuSpec'
 import SkuTable from './SkuTable'
 import Qrcode from './qrcode'
@@ -8,6 +9,7 @@ const version = '0.1.13'
 // 存储组件列表
 const components = [
   FileGroup,
+  BgSelector,
   SkuSpec,
   SkuTable,
   Qrcode
