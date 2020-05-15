@@ -1,18 +1,18 @@
-### 基础用法
-`颜色选择` form item 点击按钮选择颜色
+# 背景颜色选择器 组件
 
+---
+
+
+## 如何使用
 <div class="demo-block">
-   <bgSelector v-model="value" />
+   <bgSelectorDemo />
 </div>
 
 :::demo
 ```html
-<bgSelector v-model="value" />
+ <bgSelector v-model="value" />
 ```
 :::
-
-## 如何使用
-
 
 
 ## Attributes
@@ -22,13 +22,3 @@
 | 参数  | 说明  | 类型  | 可选值 | 默认值 |
 |-----|-----|-----|-----|-----|
 | -   | -   | -   | -   | -   |
-
-<script>
-export default {
-  data () {
-    return {
-      value:'bg-gradual-red'
-    }
-  }
-}
-</script>
