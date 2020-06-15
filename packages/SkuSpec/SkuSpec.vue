@@ -34,7 +34,7 @@
 <script>
 
 export default {
-  name: 'SkuSpec',
+  name: 'JSkuSpec',
   props: {
     // 是否显示json
     isShowCode: {

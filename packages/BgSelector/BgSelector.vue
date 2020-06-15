@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  name: 'BgSelector',
+  name: 'JBgSelector',
   props: {
     value: {
       default: '',

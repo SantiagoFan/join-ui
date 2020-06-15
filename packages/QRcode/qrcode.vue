@@ -6,7 +6,7 @@
 <script>
 import QRCode from 'qrcodejs2'
 export default {
-  name: 'qrcode',
+  name: 'JQRcode',
   props: {
     text: {
       type: String,

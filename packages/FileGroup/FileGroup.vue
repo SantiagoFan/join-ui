@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'jui-fileGroup', 
+  name: 'JFileGroup', 
 
   data () {
 

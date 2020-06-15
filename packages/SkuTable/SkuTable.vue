@@ -111,7 +111,7 @@ function descartes(list) {
 }
 
 export default {
-  name: 'SkuTable',
+  name: 'JSkuTable',
   props: {
     // 是否显示json
     isShowCode: {

@@ -1,18 +1,18 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
-import FileGroup from './FileGroup'
 import BgSelector from './BgSelector'
+import FileGroup from './FileGroup'
+import QRcode from './QRcode'
 import SkuSpec from './SkuSpec'
 import SkuTable from './SkuTable'
-import Qrcode from './qrcode'
 const version = '0.1.13'
 // 存储组件列表
 const components = [
-  FileGroup,
   BgSelector,
+  FileGroup,
+  QRcode,
   SkuSpec,
-  SkuTable,
-  Qrcode
+  SkuTable
 ]
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = Vue => {
@@ -33,8 +33,11 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   version,
+  BgSelector,
   FileGroup,
+  QRcode,
   SkuSpec,
-  SkuTable,
-  Qrcode
+  SkuTable
 }
+// 导出全部 适用按需引入写法
+export { BgSelector, FileGroup, QRcode, SkuSpec, SkuTable }
