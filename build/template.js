@@ -4,7 +4,7 @@ module.exports = {
         compoenntName = compoenntName.charAt(0).toLowerCase() + compoenntName.slice(1)
         return `<template>
 
-  <div class="jui-${compoenntName}">
+  <div class="j-${compoenntName}">
 
     ${compoenntName}
 
@@ -13,7 +13,7 @@ module.exports = {
 
 <script>
 export default {
-  name: 'jui-${compoenntName}', 
+  name: 'J${compoenntName}', 
 
   data () {
 
@@ -31,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-.jui-${compoenntName}{}
+.j-${compoenntName}{}
 </style>
 `
     },
