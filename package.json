@@ -1,6 +1,6 @@
 {
   "name": "join-ui",
-  "version": "0.1.14",
+  "version": "0.1.18",
   "private": false,
   "author": "santiago_fan <464884785@qq.com>",
   "scripts": {
@@ -9,16 +9,18 @@
     "lint": "vue-cli-service lint",
     "build:docs": "vue-cli-service build",
     "build:entry": "node build/build-entry.js ",
+    "build:lib": "node build/build-lib.js ",
     "del:comp": "node build/delete-comp.js && node build/build-entry.js",
     "lib": "vue-cli-service build --target lib --name join-ui --dest lib packages/index.js",
     "new:comp": "node build/create-comp.js && node build/build-entry.js",
     "publish:docs": "node build/publish-docs.js"
   },
-  "main": "lib/join-ui.umd.min.js",
+  "main": "lib/main.umd.min.js",
   "dependencies": {
     "core-js": "^3.6.4",
     "element-ui": "^2.13.1",
     "qrcodejs2": "0.0.2",
+    "chalk": "^4.1.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {

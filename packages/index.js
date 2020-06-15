@@ -2,15 +2,15 @@
 // This file is auto gererated by build/build-entry.js
 import BgSelector from './BgSelector'
 import FileGroup from './FileGroup'
-import QRcode from './QRcode'
+import Qrcode from './Qrcode'
 import SkuSpec from './SkuSpec'
 import SkuTable from './SkuTable'
-const version = '0.1.13'
+const version = '0.1.18'
 // 存储组件列表
 const components = [
   BgSelector,
   FileGroup,
-  QRcode,
+  Qrcode,
   SkuSpec,
   SkuTable
 ]
@@ -35,9 +35,9 @@ export default {
   version,
   BgSelector,
   FileGroup,
-  QRcode,
+  Qrcode,
   SkuSpec,
   SkuTable
 }
 // 导出全部 适用按需引入写法
-export { BgSelector, FileGroup, QRcode, SkuSpec, SkuTable }
+export { BgSelector, FileGroup, Qrcode, SkuSpec, SkuTable }

@@ -54,9 +54,9 @@ module.exports = {
     pages: {
         // 将entry 修改 src 目录 为 examples 目录
         index: {
-            entry: 'examples/main.js',
-            template: 'public/index.html',
-            filename: 'index.html'
+            entry: 'examples/main.js',      //  入口
+            template: 'public/index.html',  //  模板
+            filename: 'index.html'          //  输出文件
         }
     },
     chainWebpack: config => {

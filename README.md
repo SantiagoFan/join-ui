@@ -72,6 +72,10 @@ npm publish --registry http://registry.npmjs.org
 ├─ examples             // 说明文档
 │      BgSelector  // 主题背景颜色选择器-文档
 ├─ lib                  // npm 包文件
+│      *.umd.js         // 给浏览器或则AMD loader 使用的UMD 包
+│      *.umd.min.js     // UMD 包 压缩版
+│      *.common.js      // 打包器用的 CommonJS 包
+│      *.umd.min.js     // CommonJS 包 压缩版
 ├─ packages             // 组件源码
 │      BgSelector  // 主题背景颜色选择器
 ├─ public
