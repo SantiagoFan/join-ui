@@ -1,15 +1,13 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
-import BgSelector from './BgSelector'
-import FileGroup from './FileGroup'
-import Qrcode from './Qrcode'
-import SkuSpec from './SkuSpec'
-import SkuTable from './SkuTable'
-const version = '0.1.18'
+import BgSelector from './bg-selector'
+import Qrcode from './qrcode'
+import SkuSpec from './sku-spec'
+import SkuTable from './sku-table'
+const version = '0.1.21'
 // 存储组件列表
 const components = [
   BgSelector,
-  FileGroup,
   Qrcode,
   SkuSpec,
   SkuTable
@@ -34,10 +32,9 @@ export default {
   install,
   version,
   BgSelector,
-  FileGroup,
   Qrcode,
   SkuSpec,
   SkuTable
 }
 // 导出全部 适用按需引入写法
-export { BgSelector, FileGroup, Qrcode, SkuSpec, SkuTable }
+export { BgSelector, Qrcode, SkuSpec, SkuTable }

@@ -11,19 +11,20 @@ function build({ input, output } = {}, index, arr) {
     )
   }
 
-
 // 构建多入口文件
 const newlist = Components.map(name=> { 
-    return {
-         'input' : 'packages/'+name+'/index.js',
-         'output':name
-        }
- })
- // 添加默认全打包入口文件
-newlist.push({'input':'packages/index.js',output:'main'})
-
+  return {
+    'input' : 'packages/'+name+'/index.js',
+    'output':name+"/index"
+  }
+})
 // 开始构建
 newlist.forEach(build)
+ 
+// 添加默认全打包入口文件
+console.log(chalk.blue(`正在打包第主文件`))
+build({'input':'packages/index.js',output:'main'},0,[1])
+
 
 console.log(chalk.green(`=========================================`))
 console.log(chalk.green(`========打包成功(build success)!=========`))

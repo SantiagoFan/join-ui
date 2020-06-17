@@ -77,6 +77,7 @@ npm publish --registry http://registry.npmjs.org
 │      *.common.js      // 打包器用的 CommonJS 包
 │      *.umd.min.js     // CommonJS 包 压缩版
 ├─ packages             // 组件源码
-│      BgSelector  // 主题背景颜色选择器
+│      bg-selector  // 主题背景颜色选择器
+│      theme-chalk  // 组件库主题包 单独项目可独立运行
 ├─ public
 ```
