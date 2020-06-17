@@ -4,7 +4,7 @@ import BgSelector from './bg-selector'
 import Qrcode from './qrcode'
 import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
-const version = '0.1.21'
+const version = '0.1.27'
 // 存储组件列表
 const components = [
   BgSelector,
@@ -36,5 +36,4 @@ export default {
   SkuSpec,
   SkuTable
 }
-// 导出全部 适用按需引入写法
-export { BgSelector, Qrcode, SkuSpec, SkuTable }
+

@@ -21,6 +21,7 @@ Vue.use(juiqrcode)
 
 // 完整引入
 import jui from 'join-ui'
+import 'join-ui/lib/theme-chalk/index.css';
 Vue.use(jui)
 ```
 页面代码

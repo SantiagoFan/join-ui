@@ -5,13 +5,13 @@
 `text` 内容为二维码具体数据
 
 <div class="demo-block">
-   <qrcode text='https://github.com/SantiagoFan/join-ui'>
- </qrcode>
+   <j-qrcode text='https://github.com/SantiagoFan/join-ui'>
+ </j-qrcode>
 </div>
 
 :::demo
 ```html
- <qrcode text='https://github.com/SantiagoFan/join-ui'></qrcode>
+ <j-qrcode text='https://github.com/SantiagoFan/join-ui'></j-qrcode>
 ```
 :::
 
@@ -19,16 +19,16 @@
 通过控制 `colorDark` 修改二维码前景颜色 `width` `height` 修改二维码显示大小
 
 <div class="demo-block">
-   <qrcode text='https://github.com/SantiagoFan/join-ui' colorDark="#003c81" :width="200"  :height="200">
- </qrcode>
+   <j-qrcode text='https://github.com/SantiagoFan/join-ui' colorDark="#003c81" :width="200"  :height="200">
+ </j-qrcode>
 </div>
 
 :::demo
 ```html
-<qrcode text='https://github.com/SantiagoFan/join-ui' 
+<j-qrcode text='https://github.com/SantiagoFan/join-ui' 
   colorDark="#003c81" width="200"  height="200"
   >
-</qrcode>
+</j-qrcode>
 ```
 :::
 

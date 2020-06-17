@@ -5,6 +5,7 @@ import ElementUI from 'element-ui';
 import  'element-ui/lib/theme-chalk/index.css'
 import demoBlock from './components/demo-block.vue'
 import JUI from '~/index'
+import '~/theme-chalk/src/index.scss'
 
 // 组件应用 demo集合  检索examples/demos 全部
 const Demos = []

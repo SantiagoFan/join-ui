@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="jui-bgSelector-container">
     <el-popover
       v-model="visible"
       placement="right"
@@ -10,7 +10,7 @@
       <div slot="reference" class="item" :class="{'disabled':disabled,[value]:true}">{{ title }}
         <i class="el-icon-arrow-right"></i>
       </div>
-      <div>
+      <div class="jui-bgSelector-container">
         <div v-for="(item,index) in list" :key="index" class="item" :class="item.name" @click="select(item)">{{ item.title }}</div>
         <div class="item" @click="clear()"><i class="el-icon-circle-close"></i></div>
       </div>

@@ -52,8 +52,7 @@ export default {
   version,
   ${exportList.join(',\n  ')}
 }
-// 导出全部 适用按需引入写法
-export { ${exportList.join(', ')} }
+
 `
 
   fs.writeFileSync(path.join(__dirname, '../packages/index.js'), content)

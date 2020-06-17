@@ -9,8 +9,8 @@
 
 :::demo
 ```html
-  <sku-spec v-model="specification" />
-  <sku-table v-model="skus" :specification.sync="specification"></sku-table>
+  <j-sku-spec v-model="specification" />
+  <j-sku-table v-model="skus" :specification.sync="specification"></j-sku-table>
 ```
 :::
 

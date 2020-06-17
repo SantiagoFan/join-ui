@@ -1,5 +1,5 @@
 <template>
-  <bgSelector v-model="value" />
+  <j-bgSelector v-model="value" />
 </template>
 <script>
 export default {
