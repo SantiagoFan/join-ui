@@ -6,6 +6,11 @@ import  'element-ui/lib/theme-chalk/index.css'
 import demoBlock from './components/demo-block.vue'
 import JUI from '~/index'
 import '~/theme-chalk/src/index.scss'
+/* svg icon 引入文件 */
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+const reqIcon = require.context('@/icons', false, /\.svg$/)
+requireAll(reqIcon)
+
 
 // 组件应用 demo集合  检索examples/demos 全部
 const Demos = []

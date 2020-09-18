@@ -56,7 +56,7 @@ module.exports = {
         index: {
             entry: 'examples/main.js',      //  入口
             template: 'public/index.html',  //  模板
-            filename: 'index.html'          //  输出文件
+            filename: 'index.html'         //  输出文件
         }
     },
     chainWebpack: config => {
@@ -74,5 +74,15 @@ module.exports = {
             .use('vue-markdown-loader')
             .loader('vue-markdown-loader/lib/markdown-compiler')
             .options(vueMarkdown)
+        // svg icon 图标
+        config.module.rules.delete('svg') // 重点:删除默认配置中处理svg,
+        config.module
+            .rule('svg-sprite-loader')
+            .test(/\.svg$/)
+            .include.add(path.resolve('examples/icons')) // 存放svg 图标图片的文件夹
+            .end()
+            .use('svg-sprite-loader')
+            .loader('svg-sprite-loader')
+            .options({ symbolId: 'icon-[name]' })
     }
   }

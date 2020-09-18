@@ -14,6 +14,10 @@ export default {
     },
     className: {
       type: String
+    },
+    type:{
+      type:String,
+      default:'icon'
     }
   },
   computed: {
@@ -22,9 +26,9 @@ export default {
     },
     svgClass () {
       if (this.className) {
-        return 'svg-icon ' + this.className
+        return 'svg-'+this.type+' ' + this.className
       } else {
-        return 'svg-icon'
+        return 'svg-'+this.type
       }
     }
   }
@@ -36,6 +40,12 @@ export default {
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.svg-illustration {
+  width: 100%;
+  height: 100%;
   fill: currentColor;
   overflow: hidden;
 }
