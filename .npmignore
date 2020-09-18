@@ -1,6 +1,8 @@
 examples/
 packages/
 public/
+config/
+node_modules/
 build/
 dist/
 vue.config.js
