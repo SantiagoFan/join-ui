@@ -5,16 +5,14 @@ import Qrcode from './qrcode'
 import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
 import svgIcon from './svg-icon'
-import svgIillustration from './svg-illustration'
-const version = '0.1.27'
+const version = '0.1.28'
 // 存储组件列表
 const components = [
   BgSelector,
   Qrcode,
   SkuSpec,
   SkuTable,
-  svgIcon,
-  svgIillustration
+  svgIcon
 ]
 // 定义 install 方法，接收 Vue 作为参数。如果使用 use 注册插件，则所有的组件都将被注册
 const install = Vue => {
