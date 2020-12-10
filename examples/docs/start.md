@@ -8,51 +8,57 @@
 npm install join-ui --save
 ```
 
-## 全局组件使用
-
-```js
-import jui from join-ui' // 引入组件库
-```
-最后，全局使用组件库
-```js
-Vue.use(jui)
-```
-
-引入`px`或者`vw`布局样式
-
-```js
-import 'vue-cards-demo/lib/theme-chalk/index.px.css' // px单位，适用于pc端布局
-import 'vue-cards-demo/lib/theme-chalk/index.vw.css' // vw单位，适用于移动端布局
-```
-
-
-
-## 单个组件按需使用
+## 引入
+### 方式一.自动按需引入组件 (推荐)
 babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 的写法自动转换为按需引入的方式
+
+```shell
 # 安装插件
 npm i babel-plugin-import -D
+```
+```
+// 在.babelrc 中添加配置
+// 注意：webpack 1 无需设置 libraryDirectory
+{
+  "plugins": [
+    ["import", {
+      "libraryName": "join-ui",
+      "libraryDirectory": "es",
+      "style": true
+    }]
+  ]
+}
 
-
-可以局部注册所需的组件，适用于与其他框架组合使用的场景
-
-
-```js
-
+// 对于使用 babel7 的用户，可以在 babel.config.js 中配置
+module.exports = {
+  plugins: [
+    ['import', {
+      libraryName: 'join-ui',
+      libraryDirectory: 'es',
+      style: true
+    }, 'join-ui']
+  ]
+};
+```
+```
+// 接着你可以在代码中直接引入 JoinUI 组件
+// 插件会自动将代码转化为方式二中的按需引入形式
 import { Qrcode } from 'join-ui'
-// use or components
-Vue.use(Qrcode)
-
+```
+### 方式二.手动按需引入组件
+在不使用插件的情况下，可以手动引入需要的组件。
+```
+import Qrcode from 'join-ui/lib/qrcode';
+import 'join-ui/lib/theme-chalk/qrcode';
 ```
 
+### 方式三. 导入所有组件
+JoinUI 支持一次性导入所有组件，引入所有组件会增加代码包体积，因此不推荐这种做法。
+```js
+import Vue from 'vue';
+import jui from 'join-ui' // 引入组件库
+import 'join-ui/lib/index.css';
 
-在模板中，用 `<qrcode></qrcode>` 自定义标签的方式使用组件
-
-```html
-<template>
-  <div>
-    <qrcode></qrcode>
-  </div>
-</template>
+Vue.use(jui);
 ```
-
-
+Tips: 配置按需引入后，将不允许直接导入所有组件。
