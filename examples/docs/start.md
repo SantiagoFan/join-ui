@@ -14,29 +14,19 @@ babel-plugin-import 是一款 babel 插件，它会在编译过程中将 import 
 
 ```shell
 # 安装插件
-npm i babel-plugin-import -D
+npm i babel-plugin-component -D
 ```
 ```
-// 在.babelrc 中添加配置
-// 注意：webpack 1 无需设置 libraryDirectory
-{
-  "plugins": [
-    ["import", {
-      "libraryName": "join-ui",
-      "libraryDirectory": "es",
-      "style": true
-    }]
-  ]
-}
-
 // 对于使用 babel7 的用户，可以在 babel.config.js 中配置
 module.exports = {
   plugins: [
-    ['import', {
-      libraryName: 'join-ui',
-      libraryDirectory: 'es',
-      style: true
-    }, 'join-ui']
+    [
+      "component",
+      {
+        "libraryName": "join-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ]
   ]
 };
 ```
