@@ -48,8 +48,8 @@ import { Qrcode } from 'join-ui'
 ### 方式二.手动按需引入组件
 在不使用插件的情况下，可以手动引入需要的组件。
 ```
-import Qrcode from 'join-ui/lib/qrcode';
-import 'join-ui/lib/theme-chalk/qrcode';
+import JBgSelector from 'join-ui/lib/bg-selector';
+import 'join-ui/lib/theme-chalk/bg-selector.css';
 ```
 
 ### 方式三. 导入所有组件
