@@ -6,6 +6,7 @@ github: https://github.com/SantiagoFan/join-ui
 Author: 464884785@qq.com  
 PC端  推荐使用ElementUI     
 移动端 推荐Vant 作为补充方案
+![join-ui](https://socialify.git.ci/SantiagoFan/join-ui/image?description=1&font=Inter&language=1&owner=1&pattern=Circuit%20Board&theme=Light)
 
 
 ## npm 安装
