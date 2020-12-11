@@ -33,7 +33,21 @@ module.exports = {
 ```
 // 接着你可以在代码中直接引入 JoinUI 组件
 // 插件会自动将代码转化为方式二中的按需引入形式
-import { Qrcode } from 'join-ui'
+import Vue from 'vue';
+import { Qrcode, BgSelector } from 'join-ui';
+import App from './App.vue';
+
+Vue.component(Qrcode.name, Qrcode);
+Vue.component(BgSelector.name, BgSelector);
+/* 或写为
+ * Vue.use(Qrcode)
+ * Vue.use(BgSelector)
+ */
+
+new Vue({
+  el: '#app',
+  render: h => h(App)
+});
 ```
 ### 方式二.手动按需引入组件
 在不使用插件的情况下，可以手动引入需要的组件。
