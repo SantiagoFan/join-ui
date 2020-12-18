@@ -20,11 +20,6 @@
         "desc": "开发指南"
       },
       {
-        "name": "plan",
-        "path": "/plan",
-        "desc": "开发计划"
-      },
-      {
         "name": "index",
         "path": "/index",
         "type": "pages"

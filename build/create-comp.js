@@ -39,9 +39,9 @@ const generateFile = (path, data) => {
 log('请输入要生成的组件名称, 形如 demo 或者 demo-test')
 let componentName = ''
 process.stdin.on('data', async chunk => {
-    let inputName = String(chunk).trim().toString()
-    inputName = uppercamelize(inputName)
-    const componentDirectory = resolve('../packages', inputName)
+    let input_name = String(chunk).trim().toString()
+    inputName = uppercamelize(input_name)
+    const componentDirectory = resolve('../packages', input_name)
     const componentVueName = resolve(componentDirectory, `${inputName}.vue` )
     const entryComponentName = resolve(componentDirectory, 'index.js')
 

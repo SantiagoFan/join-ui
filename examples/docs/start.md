@@ -4,7 +4,7 @@
 
 ## 安装
 
-```
+```shell
 npm install join-ui --save
 ```
 
