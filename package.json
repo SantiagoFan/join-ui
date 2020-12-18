@@ -1,6 +1,6 @@
 {
   "name": "join-ui",
-  "version": "0.1.40",
+  "version": "0.1.41",
   "private": false,
   "author": "santiago_fan <464884785@qq.com>",
   "scripts": {
@@ -19,7 +19,6 @@
   "main": "lib/join-ui.common.js",
   "dependencies": {
     "chalk": "^4.1.0",
-    "core-js": "^3.8.1",
     "element-ui": "^2.14.1",
     "qrcodejs2": "0.0.2",
     "vue": "^2.6.12"
