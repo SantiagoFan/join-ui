@@ -2,16 +2,14 @@
 // This file is auto gererated by build/build-entry.js
 import BgSelector from './bg-selector'
 import Qrcode from './qrcode'
-import RmFileList from './rm-file-list'
 import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
 import SvgIcon from './svg-icon'
-const version = '0.1.41'
+const version = '0.1.42'
 // 存储组件列表
 const components = [
   BgSelector,
   Qrcode,
-  RmFileList,
   SkuSpec,
   SkuTable,
   SvgIcon
@@ -37,7 +35,6 @@ export default {
   version,
   BgSelector,
   Qrcode,
-  RmFileList,
   SkuSpec,
   SkuTable,
   SvgIcon
