@@ -13,7 +13,7 @@
 import mainHeader from './components/header.vue'
 import mainFooter from './components/footer.vue'
 import sideNav from './components/side-nav.vue'
-
+import JUI from '~/index'
 
 import Clipboard from 'clipboard'
 
@@ -25,6 +25,7 @@ import Clipboard from 'clipboard'
       mainFooter
     },
     mounted() {
+      console.info(JUI)
       let clipboard = new Clipboard('.code-copy', {
           text: (trigger) => {
               return trigger.previousSibling.innerText

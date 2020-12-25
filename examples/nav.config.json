@@ -35,6 +35,11 @@
             "path": "/qrcode"
           },
           {
+            "desc": "链接展示器",
+            "name": "LinkViewer",
+            "path": "/LinkViewer"
+          },
+          {
             "desc": "背景颜色选择器",
             "name": "BgSelector",
             "path": "/BgSelector"

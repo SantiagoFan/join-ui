@@ -1,6 +1,8 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
 import BgSelector from './bg-selector'
+import Clipboard from './clipboard'
+import LinkViewer from './link-viewer'
 import Qrcode from './qrcode'
 import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
@@ -9,6 +11,8 @@ const version = '0.1.42'
 // 存储组件列表
 const components = [
   BgSelector,
+  Clipboard,
+  LinkViewer,
   Qrcode,
   SkuSpec,
   SkuTable,
@@ -34,6 +38,8 @@ export default {
   install,
   version,
   BgSelector,
+  Clipboard,
+  LinkViewer,
   Qrcode,
   SkuSpec,
   SkuTable,
