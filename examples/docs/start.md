@@ -61,7 +61,7 @@ JoinUI 支持一次性导入所有组件，引入所有组件会增加代码包�
 ```js
 import Vue from 'vue';
 import jui from 'join-ui' // 引入组件库
-import 'join-ui/lib/index.css';
+import 'join-ui/lib/theme-chalk/index.css'
 
 Vue.use(jui);
 ```
