@@ -11,9 +11,9 @@ const errorLog = error => console.log(chalk.red( `${error}` ))
 
 log('请输入要删除的组件名称, 形如 demo 或者 demo-test')
 process.stdin.on('data', async chunk => {
-    let inputName = String(chunk).trim().toString()
-    inputName = uppercamelize(inputName)
-    const componentDirectory = resolve('../packages', inputName)
+    let input_name = String(chunk).trim().toString()
+    inputName = uppercamelize(input_name)
+    const componentDirectory = resolve('../packages', input_name)
 
     const hasComponentDirectory = fs.existsSync(componentDirectory)
 

@@ -1,6 +1,5 @@
 module.exports = {
     vueTemplate: compoenntName => {
-
         compoenntName = compoenntName.charAt(0).toLowerCase() + compoenntName.slice(1)
         return `<template>
 
@@ -37,7 +36,7 @@ export default {
     },
     entryTemplate: compoenntName => {
 
-        return `import ${compoenntName} from './${compoenntName}'
+        return `import ${compoenntName} from './${compoenntName}.vue'
 
 ${compoenntName}.install = function (Vue) {
   Vue.component(${compoenntName}.name, ${compoenntName})
