@@ -48,6 +48,11 @@
             "desc": "svg 图标",
             "name": "SvgIcon",
             "path": "/SvgIcon"
+          },
+          {
+            "desc": "标题栏",
+            "name": "TitleBar",
+            "path": "/TitleBar"
           }
         ]
       },

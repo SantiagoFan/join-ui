@@ -37,15 +37,14 @@ const generateFile = (path, data) => {
 log('请输入要生成的组件名称, 形如 demo 或者 demo-test')
 let componentName = ''
 process.stdin.on('data', async chunk => {
-    let input_name = String(chunk).trim().toString()
-    let inputName = uppercamelize(input_name)
+    let input_name = String(chunk).trim().toString() // eg: title-bar
+    let inputName = uppercamelize(input_name) //eg: TitleBar
     const componentDirectory = resolve('../packages', input_name)
     const componentVueName = resolve(componentDirectory, `${inputName}.vue` )
     const entryComponentName = resolve(componentDirectory, 'index.js')
 
     const hasComponentDirectory = fs.existsSync(componentDirectory)
     if (inputName) {
-
         // 这里生成组件
         if (hasComponentDirectory) {
             errorLog( `${inputName}组件目录已存在，请重新输入` )
@@ -62,7 +61,7 @@ process.stdin.on('data', async chunk => {
                 componentName = inputName
             }
             log( `生成 vue 文件 ${componentVueName}` )
-            await generateFile(componentVueName, vueTemplate(componentName))
+            await generateFile(componentVueName, vueTemplate(input_name,componentName))
             log( `生成 entry 文件 ${entryComponentName}` )
             await generateFile(entryComponentName, entryTemplate(componentName))
             successLog('生成 component 成功')

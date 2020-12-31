@@ -1,9 +1,10 @@
 module.exports = {
-    vueTemplate: compoenntName => {
-        compoenntName = compoenntName.charAt(0).toLowerCase() + compoenntName.slice(1)
+    vueTemplate: (input_name,compoenntName) => {
+        // eg:Tatile-bar => titleBar
+        // compoenntName = compoenntName.charAt(0).toLowerCase() + compoenntName.slice(1)
         return `<template>
 
-  <div class="j-${compoenntName}">
+  <div class="j-${input_name}">
 
     ${compoenntName}
 
@@ -30,7 +31,7 @@ export default {
 </script>
 
 <style lang="scss" scope>
-.j-${compoenntName}{}
+.j-${input_name}{}
 </style>
 `
     },
