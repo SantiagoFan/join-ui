@@ -1,7 +1,13 @@
 <template>
   <div class="">
     <j-sku-spec v-model="specification" />
-    <j-SkuTable v-model="skus" :specification.sync="specification"></j-SkuTable>
+    <j-SkuTable v-model="skus" :specification.sync="specification" :showProductNo="true" :showProductCost="true"></j-SkuTable>
+    <div>
+      {{specification}}
+    </div>
+    <div>
+      {{skus}}
+    </div>
   </div>
 </template>
 <script>

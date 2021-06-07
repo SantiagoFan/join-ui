@@ -12,9 +12,9 @@
             </th>
             <!-- <th>sku key</th> -->
             <th style="width: 160px;">销售价（元）</th>
-            <th style="width: 160px;">库存</th>
-            <th style="width: 160px;">规格编码</th>
-            <th style="width: 160px;">成本价（元）</th>
+            <th style="width: 160px;" v-if="showProductStock">库存</th>
+            <th style="width: 160px;" v-if="showProductNo">规格编码</th>
+            <th style="width: 160px;" v-if="showProductCost">成本价（元）</th>
             <th style="width: 100px;">是否启用</th>
           </tr>
         </thead>
@@ -36,7 +36,7 @@
               >
               </el-input-number>
             </td>
-            <td>
+            <td v-if="showProductStock">
               <el-input-number
                 v-model.number="item.ProductStock"
                 size="small"
@@ -48,7 +48,7 @@
               >
               </el-input-number>
             </td>
-            <td>
+            <td v-if="showProductNo">
               <el-input
                 v-model="item.ProductNo"
                 size="small"
@@ -58,7 +58,7 @@
               >
               </el-input>
             </td>
-            <td>
+            <td v-if="showProductCost">
               <el-input-number
                 v-model.number="item.ProductCost"
                 size="small"
@@ -118,7 +118,21 @@ export default {
       type: Boolean,
       default: false
     },
-
+    // 是否显示 商品编码
+    showProductNo:{
+      type: Boolean,
+      default: true
+    },
+    // 是否显示成本
+    showProductCost:{
+      type: Boolean,
+      default: true
+    },
+    // 是否显示库存
+    showProductStock:{
+      type: Boolean,
+      default: true
+    },
     specification: { // 规格
       type: Array,
       default: function() { return [] }

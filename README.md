@@ -35,6 +35,7 @@ https://npm.taobao.org/package/join-ui
 npm run new:comp
 
 # 发布文档页面
+npm run build:docs
 npm run publish:docs
 
 # 发布 npm

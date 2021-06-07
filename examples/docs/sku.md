@@ -10,17 +10,24 @@
 :::demo
 ```html
   <j-sku-spec v-model="specification" />
-  <j-sku-table v-model="skus" :specification.sync="specification"></j-sku-table>
+  <j-SkuTable v-model="skus" :specification.sync="specification" :showProductNo="true" :showProductCost="true"></j-SkuTable>
 ```
 :::
 
 
-## API
+## j-sku-spec 属性
 
 |     参数     |     说明     |     类型     |     默认值     |
 |-------------|------------- |------------ |-------------- |
-|   text    | 二维码转码内容  |    String    | - |  
-|width      |     宽度      |    Number       |
-|height     |     高度      |    Number       | 
-|colorDark  |     前景颜色      |    String       |  #000
-|colorLight |     背景颜色      |    String       |  #fff
+|   value    | 规格集合  |    Array    | [] |  
+
+## j-sku-table 属性
+
+|     参数     |     说明     |     类型     |     默认值     |
+|-------------|------------- |------------ |-------------- |
+| value      | sku 集合      | Array  | [] |  
+| specification      | 规格集合      | Array  | [] |  
+| showProductStock      | 是否显示库存      | bool  | true |  
+| showProductNo         | 是否显示商品编码  | bool  | true |
+| showProductCost       | 是否显示成本价    | bool  | true |  
+| isShowCode            | 是否显示sku代码（开发阶段）| bool  | true|
