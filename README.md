@@ -4,7 +4,7 @@
 https://santiagofan.github.io/join-ui/
 
 github: https://github.com/SantiagoFan/join-ui  
-Author: 464884785@qq.com  
+Author: san_fan@qq.com  
 PC端  推荐使用ElementUI     
 ![join-ui](https://socialify.git.ci/SantiagoFan/join-ui/image?description=1&font=Inter&language=1&owner=1&pattern=Circuit%20Board&theme=Light)
 
