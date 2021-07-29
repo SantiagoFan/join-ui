@@ -1,0 +1,105 @@
+{
+    "开发指南": [
+      {
+        "name": "site-index",
+        "path": "/"
+      },
+      {
+        "name": "introduce",
+        "path": "/introduce",
+        "desc": "介绍"
+      },
+      {
+        "name": "start",
+        "path": "/start",
+        "desc": "快速上手"
+      },
+      {
+        "name": "contribute",
+        "path": "/contribute",
+        "desc": "开发指南"
+      },
+      {
+        "name": "index",
+        "path": "/index",
+        "type": "pages"
+      }
+    ],
+    "组件": [
+      {
+        "desc": "基础组件",
+        "items": [
+          {
+            "desc": "二维码",
+            "name": "qrcode",
+            "path": "/qrcode"
+          },
+          {
+            "desc": "链接展示器",
+            "name": "LinkViewer",
+            "path": "/LinkViewer"
+          },
+          {
+            "desc": "背景颜色选择器",
+            "name": "BgSelector",
+            "path": "/BgSelector"
+          },
+          {
+            "desc": "svg 图标",
+            "name": "SvgIcon",
+            "path": "/SvgIcon"
+          },
+          {
+            "desc": "标题栏",
+            "name": "TitleBar",
+            "path": "/TitleBar"
+          }
+        ]
+      },
+      {
+        "desc": "拓展组件",
+        "items": [
+          {
+            "desc": "SKU 商品规格",
+            "name": "sku",
+            "path": "/sku"
+          }
+        ]
+      },
+      {
+        "desc":"资源管理组件",
+        "items":[
+          {
+            "desc": "文件选择",
+            "name": "rm-file",
+            "path": "/rm-file"
+          }
+        ]
+      },
+      {
+        "desc":"设计组件",
+        "items":[
+          {
+            "desc": "轮播组件",
+            "name": "wg-banner",
+            "path": "/wg-banner"
+          },
+          {
+            "desc": "产品列表",
+            "name": "wg-goods",
+            "path": "/wg-goods"
+          },
+          {
+            "desc": "产品搜索",
+            "name": "wg-search",
+            "path": "/wg-search"
+          },
+          {
+            "desc": "辅助空白",
+            "name": "wg-blank",
+            "path": "/wg-blank"
+          }
+        ]
+      }
+    ]
+  }
