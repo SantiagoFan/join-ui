@@ -6,7 +6,7 @@
         <li v-for="(item, index) in value" :key="index" class="item">
           <div class="name">
             <el-input v-model="item.name" :disabled="disabled" size="small" placeholder="输入产品规格名称"></el-input>
-            <i class="icon el-icon-circle-close" @click="delSpec(index)"></i>
+            <i class="icon el-icon-circle-close" v-show="!disabled" @click="delSpec(index)"></i>
           </div>
           <div class="values">
             <span v-for="(tag, num) in item.value" :key="tag" class="el-tag">
