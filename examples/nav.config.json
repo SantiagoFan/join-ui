@@ -63,6 +63,11 @@
             "desc": "SKU 商品规格",
             "name": "sku",
             "path": "/sku"
+          },
+          {
+            "desc": "高级查询",
+            "name": "AdvancedQuery",
+            "path": "/AdvancedQuery"
           }
         ]
       },

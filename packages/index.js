@@ -1,5 +1,6 @@
 /* eslint-disable */
 // This file is auto gererated by build/build-entry.js
+import AdvancedQuery from './advanced-query'
 import BgSelector from './bg-selector'
 import Clipboard from './clipboard'
 import LinkViewer from './link-viewer'
@@ -8,9 +9,10 @@ import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
 import SvgIcon from './svg-icon'
 import TitleBar from './title-bar'
-const version = '0.1.51'
+const version = '0.1.58'
 // 存储组件列表
 const components = [
+  AdvancedQuery,
   BgSelector,
   Clipboard,
   LinkViewer,
@@ -39,6 +41,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   version,
+  AdvancedQuery,
   BgSelector,
   Clipboard,
   LinkViewer,
