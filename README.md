@@ -45,8 +45,8 @@ npm login
 npm publish
 
 ## 如果更换换淘宝仓库 需要发布npm 请使用下面命令
-npm login --registry http://registry.npmjs.org
-npm publish --registry http://registry.npmjs.org
+npm login --registry https://registry.npmjs.org  
+npm publish --registry https://registry.npmjs.org
 
 
 ## 目录结构

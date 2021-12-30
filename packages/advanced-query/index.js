@@ -1,4 +1,4 @@
-import AdvancedQuery from './AdvancedQuery'
+import AdvancedQuery from './AdvancedQuery.vue'
 
   AdvancedQuery.install = function(Vue) {
     Vue.component(AdvancedQuery.name, AdvancedQuery)
