@@ -1,4 +1,4 @@
-import PositionSelector from './PositionSelector'
+import PositionSelector from './PositionSelector.vue'
 
   PositionSelector.install = function(Vue) {
     Vue.component(PositionSelector.name, PositionSelector)
