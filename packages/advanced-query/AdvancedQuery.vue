@@ -53,7 +53,9 @@
                 <!-- 数组类型 -->
                 <el-input-number v-if="getFieldType(item.field)=='number'"  v-bind="getFieldProps(item.field)" v-model="item.value" size="small" :controls="false" style="width:180px"></el-input-number>
                 <!-- 日期类型 -->
-                <el-date-picker v-else-if="getFieldType(item.field)=='date'" v-bind="getFieldProps(item.field)" v-model="item.value" size="small" style="width:180px"></el-date-picker>
+                <el-date-picker v-else-if="getFieldType(item.field)=='date'" type="date" v-bind="getFieldProps(item.field)" v-model="item.value" size="small" style="width:180px"></el-date-picker>
+                <!-- 日期类型 -->
+                <el-date-picker v-else-if="getFieldType(item.field)=='datetime'" type="datetime" v-bind="getFieldProps(item.field)" v-model="item.value" size="small" style="width:180px"></el-date-picker>
                 <!-- 下拉选择类型 -->
                 <el-select v-else-if="getFieldType(item.field)=='select'" v-bind="getFieldProps(item.field)" v-model="item.value" size="small" style="width:180px">
                   <el-option v-for="item in getFieldProps(item.field).options" :key="item.value" :label="item.label" :value="item.value"></el-option>
@@ -143,11 +145,25 @@ export default {
     getFieldProps(field){
       var fieldInfo = this.fields.find(f=>f.name==field)
       if(fieldInfo){
-        return fieldInfo['options'] || {}
+        var default_props = this.getDefaultProps(fieldInfo['type'])
+        return Object.assign(default_props,fieldInfo['props'])
       }
       else{
         return {}
       } 
+    },
+    /**
+     * 获取默认属性
+     */
+    getDefaultProps(type){
+      if(type == 'date'){
+        return { 'value-format':'yyyy-MM-dd' }
+      } else if(type == 'datetime'){
+        return { 'value-format':'yyyy-MM-dd HH:mm:ss' }
+      }
+      else{
+        return {}
+      }
     },
     /**
      * 获取字段 类型

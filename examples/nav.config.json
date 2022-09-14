@@ -68,6 +68,11 @@
             "desc": "高级查询",
             "name": "AdvancedQuery",
             "path": "/AdvancedQuery"
+          },
+          {
+            "desc": "位置选择器",
+            "name": "PositionSelector",
+            "path": "/PositionSelector"
           }
         ]
       },

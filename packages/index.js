@@ -4,18 +4,20 @@ import AdvancedQuery from './advanced-query'
 import BgSelector from './bg-selector'
 import Clipboard from './clipboard'
 import LinkViewer from './link-viewer'
+import PositionSelector from './position-selector'
 import Qrcode from './qrcode'
 import SkuSpec from './sku-spec'
 import SkuTable from './sku-table'
 import SvgIcon from './svg-icon'
 import TitleBar from './title-bar'
-const version = '0.1.58'
+const version = '0.2.4'
 // 存储组件列表
 const components = [
   AdvancedQuery,
   BgSelector,
   Clipboard,
   LinkViewer,
+  PositionSelector,
   Qrcode,
   SkuSpec,
   SkuTable,
@@ -45,6 +47,7 @@ export default {
   BgSelector,
   Clipboard,
   LinkViewer,
+  PositionSelector,
   Qrcode,
   SkuSpec,
   SkuTable,

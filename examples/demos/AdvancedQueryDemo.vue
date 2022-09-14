@@ -38,23 +38,25 @@ export default {
           'name':'age',
           'label':'年龄',
           'type':'number',
-          'options':{
+          'props':{
             min:0
           }
         },
         {
           'name':'birthday',
           'label':'出生日期',
-          'type':'date',
-          'options':{
-            'value-format':'yyyy-MM-dd'
-          }
+          'type':'date'
+        },
+         {
+          'name':'subtime',
+          'label':'提交时间',
+          'type':'datetime'
         },
         {
           'name':'six',
           'label':'性别',
           'type':'select',
-          'options':{
+          'props':{
             'options':[
               {'value':'男','label':'男'},
               {'value':'女','label':'女'}
