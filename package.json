@@ -49,7 +49,7 @@
     "svg-sprite-loader": "^5.2.1",
     "uppercamelcase": "^3.0.0",
     "vue-loader": "^15.9.6",
-    "vue-markdown-loader": "^2.4.1",
+    "vue-markdown-loader": "^2.5.0",
     "vue-router": "^3.4.9",
     "vue-template-compiler": "^2.6.12",
     "webpack-cli": "^3.3.12"
