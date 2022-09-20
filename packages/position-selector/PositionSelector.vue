@@ -16,7 +16,7 @@
       </div>
     </el-card>
     <!-- 弹窗选择 -->
-    <el-dialog custom-class="map-dialog" :visible.sync="dialogVisible" title="选择地图" width="1000px">
+    <el-dialog custom-class="map-dialog" :visible.sync="dialogVisible" title="选择地图" width="1000px" append-to-body>
       <div class="map">
         
         <!-- 地图 -->
