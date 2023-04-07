@@ -10,7 +10,7 @@
 :::demo
 ```html
   <j-sku-spec v-model="specification" :limit="1" />
-  <j-SkuTable v-model="skus" :specification.sync="specification" :showProductNo="true" :showProductCost="true"></j-SkuTable>
+  <j-SkuTable v-model="skus" :specification.sync="specification" :showProductNo="true" :showProductCost="true" :showEnable="true"></j-SkuTable>
 ```
 :::
 
@@ -33,5 +33,6 @@
 | showProductNo         | 是否显示商品编码  | bool  | true |
 | showProductCost       | 是否显示成本价    | bool  | true |  
 | isShowCode            | 是否显示sku代码（开发阶段）| bool  | true|
+| showEnable            | 是否显示启用控制按钮| bool  | true|
 | defaultPrice            | 规格默认价格| Number  | 1|
 |   disabled    | 是否禁用  |    boolean    | false |  

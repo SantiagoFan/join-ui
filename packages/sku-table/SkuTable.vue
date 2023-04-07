@@ -15,7 +15,7 @@
             <th style="width: 160px;" v-if="showProductStock">库存</th>
             <th style="width: 160px;" v-if="showProductNo">规格编码</th>
             <th style="width: 160px;" v-if="showProductCost">成本价（元）</th>
-            <th style="width: 100px;">是否启用</th>
+            <th style="width: 100px;" v-if="showEnable">是否启用</th>
           </tr>
         </thead>
         <tbody v-if="value.length>0">
@@ -68,7 +68,7 @@
               >
               </el-input-number>
             </td>
-            <td>
+            <td v-if="showEnable">
               <el-switch v-model="item.isUse" :disabled="disabled"></el-switch>
             </td>
           </tr>
@@ -134,6 +134,10 @@ export default {
     },
     // 是否显示库存
     showProductStock:{
+      type: Boolean,
+      default: true
+    },
+    showEnable:{
       type: Boolean,
       default: true
     },

@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <j-sku-spec v-model="specification" :isShowCode="true" />
-    <j-SkuTable v-model="skus" :defaultPrice="78.56" :isShowCode="true" :specification.sync="specification" :showProductNo="true" :showProductCost="false"></j-SkuTable>
+    <j-SkuTable v-model="skus" :defaultPrice="78.56" :isShowCode="true" :specification.sync="specification" 
+    :showEnable="true"
+    :showProductNo="true" :showProductCost="false"></j-SkuTable>
   </div>
 </template>
 <script>
