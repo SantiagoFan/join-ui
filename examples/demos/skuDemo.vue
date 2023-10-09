@@ -1,7 +1,8 @@
 <template>
   <div class="">
-    <j-sku-spec v-model="specification" :isShowCode="true" />
-    <j-SkuTable v-model="skus" :defaultPrice="78.56" :isShowCode="true" :specification.sync="specification" 
+    <j-sku-spec ref="skuSpec" v-model="specification" :isShowCode="true" />
+    <el-button @click="verify">验证数据</el-button>
+    <j-SkuTable ref="skuTable" v-model="skus" :defaultPrice="78.56" :isShowCode="true" :specification.sync="specification" 
     :showEnable="true"
     :showProductNo="true" :showProductCost="false"></j-SkuTable>
   </div>
@@ -17,6 +18,11 @@ export default {
       ],
       skus:[]
     }
+  },
+  methods:{
+    verify(){
+      alert(this.$refs['skuSpec'].verify())
+   }
   }
 }
 </script>

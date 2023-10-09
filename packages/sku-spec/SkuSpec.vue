@@ -1,11 +1,13 @@
+
 <template>
   <div class="jui-sku-container">
     <!-- 规格设置 -->
     <div class="specification">
       <ul class="spec-list">
         <li v-for="(item, index) in value" :key="index" class="item">
-          <div class="name">
+          <div class="name" :class="{is_error:verify_name(index)}">
             <el-input v-model="item.name" :disabled="disabled" size="small" placeholder="输入产品规格名称"></el-input>
+            <div class="help_info">例如:颜色,尺码</div>
             <i class="icon el-icon-circle-close" v-show="!disabled" @click="delSpec(index)"></i>
           </div>
           <div class="values">
@@ -13,7 +15,7 @@
               <span class="el-select__tags-text">{{ tag }}</span>
               <i class="el-tag__close el-icon-close"  @click="delSpecTag(index, num)"></i>
             </span>
-            <div class="add-attr">
+            <div class="add-attr" :class="{is_error:verify_value(index)}">
               <el-input 
                 v-model="addValues[index]" 
                 size="small" 
@@ -23,6 +25,7 @@
                 @click="addSpecTag(index)"
                 @keyup.native.enter="addSpecTag(index)
               "></el-input>
+              <div class="help_info" style="float:none;">例如:红色,蓝色,L,M等</div>
             </div>
           </div>
         </li>
@@ -116,6 +119,22 @@ export default {
     // 清空 addValues
     clearAddValues(index) {
       this.$set(this.addValues, index, '')
+    },
+    // 是否输入正确
+    verify_name(index) {
+      return this.value[index]['name'].trim() === ''
+    },
+    verify_value(index) {
+      return this.value[index].value.length === 0
+    },
+    // 验证所有字段
+    verify() {
+      var isV = true
+      this.value.forEach(ele => {
+        if (ele['name'].trim() === '') isV = false
+        if (ele.value.length === 0) isV = false
+      })
+      return isV
     }
   }
 }

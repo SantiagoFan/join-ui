@@ -20,6 +20,19 @@
           &:first-child {
             margin-top: 0;
           }
+          .help_info{
+            float: left;
+            line-height: 32px;
+            display: inline-block;
+            padding: 0 10px;
+            color: #888;
+            font-size: 12px;
+          }
+          .is_error{
+            .el-input__inner{
+              border: 1px solid #f56c6c;
+            }
+          }
           .name {
             background: #f3f6fb;
             padding: 7px 10px;
